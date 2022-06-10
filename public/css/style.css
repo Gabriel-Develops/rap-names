@@ -1,0 +1,16 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: aliceblue;
+    font-size: 1.6rem;
+}
+button {
+    color: blue;
+}
+
+ul img {
+    cursor: pointer;
+    vertical-align: middle;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rap Names Vote</title>
+    <link rel="stylesheet" href="/css/style.css">    
+</head>
+<body>
+    <!-- rap names go here -->
+    <ul>
+        <%  for(let i = 0; i < info.length; i++) {%>
+            <li> 
+                <span><%= info[i].name %></span> |
+                <span><%= info[i].birthName %></span> |
+                <span><%= info[i].likes %></span>
+                <img src="https://img.icons8.com/android/16/undefined/thumb-up.png" class="upvote"/>
+                <img src="https://img.icons8.com/external-others-iconmarket/16/undefined/external-delete-essential-others-iconmarket-4.png" class="del"/>
+            </li>
+            <%} 
+        %>
+    </ul>
+
+    <!-- POST - CREATE -->
+    <!-- Form to submit Names -->
+    <form action="/addRapper" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <label for="birthName">Birth Name:</label>
+        <input type="text" name="birthName" id="birthName">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
